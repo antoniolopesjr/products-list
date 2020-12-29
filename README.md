@@ -1,7 +1,6 @@
 # products-list
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app display of a list of products available on an endpoint using the Ember.js framework.
 
 ## Prerequisites
 
