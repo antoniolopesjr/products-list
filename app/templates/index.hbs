@@ -1,0 +1,41 @@
+<h1 class="text-center">
+  Lista de produtos
+</h1>
+<section class="pricing py-5">
+  <div class="grid">
+    {{#each this.model as |product|}}
+      <div class="card mb-5 mb-lg-0">
+        <div class="card-body">
+          <h5 class="card-title text-uppercase text-center">
+            {{product.name}}
+          </h5>
+          <div class="mx-auto mt-2 mb-4 text-center">
+            <img
+              class="card-img-top img-fluid"
+              src={{product.image}}
+              alt="img"
+            />
+          </div>
+          <h6 class="card-price text-center mt-3 text-success">
+            R$
+            {{product.productPrice}}
+          </h6>
+          <hr />
+          <ul class="fa-ul">
+            {{#each product.benefits as |benefit|}}
+              <li>
+                <span class="text-success">
+                  ✓
+                </span>
+                {{benefit}}
+              </li>
+            {{/each}}
+          </ul>
+          <a href="#" class="btn btn-block text-uppercase btn-buy">
+            Comprar
+          </a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
