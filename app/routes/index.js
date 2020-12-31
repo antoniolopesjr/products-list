@@ -1,5 +1,5 @@
+/* eslint-disable ember/no-jquery */
 import Route from "@ember/routing/route";
-//import fetch from "fetch";
 import $ from "jquery";
 
 export default class IndexRoute extends Route {
@@ -17,10 +17,6 @@ export default class IndexRoute extends Route {
         let results = model;
 
         let _price = results.price.toFixed(2);
-
-        function formatNumber(num) {
-          return num.replace(".", ",");
-        }
 
         let productPrice = _price.replace(".", ",");
 
